@@ -82,6 +82,7 @@ p.precio{
     color: greenyellow;
 }
 
+/*CSS Spinner*/
 .spinner {
     margin: 100px auto;
     width: 40px;
@@ -91,9 +92,9 @@ p.precio{
     
     -webkit-animation: sk-rotate 2.0s infinite linear;
     animation: sk-rotate 2.0s infinite linear;
-  }
+}
   
-  .dot1, .dot2 {
+.dot1, .dot2 {
     width: 50%;
     height: 50%;
     display: inline-block;
@@ -104,24 +105,24 @@ p.precio{
     
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
     animation: sk-bounce 2.0s infinite ease-in-out;
-  }
+}
   
-  .dot2 {
+.dot2 {
     top: auto;
     bottom: 0;
     -webkit-animation-delay: -1.0s;
     animation-delay: -1.0s;
-  }
+}
   
-  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
-  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
   
-  @-webkit-keyframes sk-bounce {
+@-webkit-keyframes sk-bounce {
     0%, 100% { -webkit-transform: scale(0.0) }
     50% { -webkit-transform: scale(1.0) }
-  }
+}
   
-  @keyframes sk-bounce {
+@keyframes sk-bounce {
     0%, 100% { 
       transform: scale(0.0);
       -webkit-transform: scale(0.0);
@@ -129,4 +130,5 @@ p.precio{
       transform: scale(1.0);
       -webkit-transform: scale(1.0);
     }
-  }
+}
+/*CSS Spinner*/

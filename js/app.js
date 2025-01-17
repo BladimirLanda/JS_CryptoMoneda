@@ -48,7 +48,7 @@ const obtenerCriptomonedas = (criptoMonedasData) => new Promise(resolve => {
 //--//
 function establecerCriptomonedas(criptoMonedas) {
     criptoMonedas.forEach(cripto => {
-        const {FullName, Name} = cripto.CoinInfo;
+        const { FullName, Name } = cripto.CoinInfo;
 
         const option = document.createElement('option');
         option.value = Name;
@@ -77,7 +77,7 @@ function submitFormulario(e) {
 
 //--//
 function consultarApi(){
-    const {moneda, criptomoneda} = campos;
+    const { moneda, criptomoneda } = campos;
     url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`;
 
     mostrarSpinner();
@@ -85,10 +85,17 @@ function consultarApi(){
     setTimeout(() => {
         fetch(url)
         .then(respuesta => respuesta.json())
-        .then(datos => mostrarCotizacion(datos.DISPLAY[criptomoneda][moneda]))
+        .then(datos => obtenerCriptomoneda(datos.DISPLAY[criptomoneda][moneda]))
+        .then(criptoMoneda => mostrarCotizacion(criptoMoneda))
         .catch(error => console.error(error));
     }, 1500)
 }
+
+//--//
+const obtenerCriptomoneda = (obtenerCriptomoneda) => new Promise(resolve => {
+    resolve(obtenerCriptomoneda);
+});
+
 
 //--//
 function mostrarCotizacion(cotizacion) {
